@@ -5,5 +5,3 @@
 vendor
 clone
 .idea
-composer.phar
-composer.lock
