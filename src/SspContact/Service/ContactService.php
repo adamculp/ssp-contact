@@ -42,6 +42,8 @@ class ContactService implements ServiceLocatorAwareInterface
      */
     public function sendMessage(Contact $contactMessage)
     {
+        $serverName = ($_SERVER['HTTP_HOST'] ? $_SERVER['HTTP_HOST'] : $_SERVER['SERVER_NAME']);
+
         // PREPARE THE EMAIL MESSAGE
         $message = new Message();
         $message->addFrom(new Address($contactMessage->getEmail(), $contactMessage->getFirstName() . ' ' . $contactMessage->getLastName()));
@@ -50,7 +52,7 @@ class ContactService implements ServiceLocatorAwareInterface
         $body = <<<MSG
 New Message \n
 From: {$contactMessage->getFirstName()} {$contactMessage->getLastName()} \n
-Subject: [contact] {$contactMessage->getSubject()} \n
+Subject: [$serverName contact] {$contactMessage->getSubject()} \n
 Message: {$contactMessage->getMessage()} \n
 MSG;
 
