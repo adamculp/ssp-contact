@@ -14,9 +14,6 @@
         "adamculp/api-consumer": "^1.0",
         "zendframework/zendframework": "2.2.*"
     },
-    "require-dev": {
-
-    },
     "autoload": {
         "psr-0": {
             "SspContact": "src/"
