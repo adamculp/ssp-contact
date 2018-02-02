@@ -103,7 +103,7 @@ class ContactForm extends Form
         // CAPTCHA
         $this->add(
             array(
-                'name' => 'human_test',
+                'name' => 'nonrobot_test',
                 'type' => 'Captcha',
                 'options' => array(
                     'label' => 'Word Verification:',
