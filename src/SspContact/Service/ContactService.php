@@ -70,7 +70,6 @@ MSG;
     public function contactIsValid(array $data)
     {
         $this->getContactFilter()->setData($data);
-        $this->getContactFilter()->get('nonrobot_test')->setBreakOnFailure(true);
         return $this->getContactFilter()->isValid();
     }
 
