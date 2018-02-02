@@ -5,6 +5,9 @@
  * Date: 7/21/13
  * Time: 12:17 PM
  * To change this template use File | Settings | File Templates.
+ *
+ * @todo update calls to Int() to be calls to ToInt() for PHP 7
+ *
  */
 
 namespace SspContact\Form;
@@ -24,7 +27,7 @@ class ContactFilter extends InputFilter
                 'name' => 'id',
                 'required' => false,
                 'filters' => array(
-                    array('name' => 'Int'),
+                    array('name' => 'ToInt'),
                 ),
             )
         );
@@ -34,7 +37,7 @@ class ContactFilter extends InputFilter
                 'name' => 'is_active',
                 'required' => false,
                 'filters' => array(
-                    array('name' => 'Int'),
+                    array('name' => 'ToInt'),
                 ),
             )
         );
