@@ -43,7 +43,6 @@ class ContactController extends AbstractActionController
         $contactService = $this->getServiceLocator()->get('contact_service');
 
         // FILTER & RETURN ERRORS
-        $this->$contactService()->get('nonrobot_test')->setBreakOnFailure(true);
         if(!$contactService->contactIsValid($data)) {
             $this->flashMessenger()->addMessage($contactService->getContactFilter()->getMessages());
             return $this->prg($this->url()->fromRoute('contact-index', array('action' => 'index')), true);
