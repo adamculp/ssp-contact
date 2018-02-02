@@ -64,9 +64,9 @@ $contactForm->prepare();
     </div>
     <?php // MESSAGE ?>
     <div class="control-group">
-        <?php echo $this->formLabel($contactForm->get('human_test')->setLabelAttributes(array('class' => 'control-label'))); ?>
+        <?php echo $this->formLabel($contactForm->get('nonrobot_test')->setLabelAttributes(array('class' => 'control-label'))); ?>
         <div class="controls">
-            <?php echo $this->formCaptcha($contactForm->get('human_test')->setAttribute('class', 'input-block-level')); ?>
+            <?php echo $this->formCaptcha($contactForm->get('nonrobot_test')->setAttribute('class', 'input-block-level')); ?>
         </div>
     </div>
 
