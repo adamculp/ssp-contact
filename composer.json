@@ -11,12 +11,9 @@
         }
     ],
     "require": {
-        "adamculp/api-consumer": "^1.0",
-        "zendframework/zendframework": "2.2.*",
-        "zendframework/zend-form": "<=2.2.1",
-        "zendframework/zend-mail": "<=2.2.1",
-        "zendframework/zend-mvc": "<=2.2.1",
-        "zf-commons/zfc-user": "0.1.*@dev"
+        "zendframework/zend-mail": "^2.10.0",
+        "zf-commons/zfc-user": "^3.0.0",
+        "zendframework/zend-captcha": "^2.9.0"
     },
     "autoload": {
         "psr-0": {
